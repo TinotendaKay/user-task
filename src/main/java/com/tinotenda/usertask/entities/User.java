@@ -2,11 +2,9 @@ package com.tinotenda.usertask.entities;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -30,4 +28,6 @@ public class User {
     @Column(name = "last_name")
     @NotBlank(message = "LastName is mandatory")
     private String lastName;
+    @OneToMany(mappedBy = "user")
+    private Set<Task> tasks;
 }
