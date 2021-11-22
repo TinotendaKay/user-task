@@ -20,8 +20,7 @@ public class TaskDao {
     private String name;
 
     private String description;
-    @JsonProperty(required = true, value = "date_time")
-    @NotNull(message = "DateTime is mandatory")
+    @JsonProperty("date_time")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime dateTime;
 }

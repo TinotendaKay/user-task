@@ -30,5 +30,6 @@ public class User {
     @NotBlank(message = "LastName is mandatory")
     private String lastName;
     @OneToMany(mappedBy = "user")
+    @JsonIgnore
     private Set<Task> tasks;
 }
