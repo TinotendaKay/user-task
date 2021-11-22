@@ -12,3 +12,5 @@ Navigate to the application's root folder and run:
 `docker compose-up`
 
 ### Swagger Link 
+
+[Local server](http://localhost:8080/swagger-ui/index.html)
